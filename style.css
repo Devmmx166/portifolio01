@@ -1,0 +1,225 @@
+  /* Cada função*/
+/*body{
+  background-image: url(../assets/bg-mobile.jpg); /*pega uma imagem e usa como pano de fundo*/
+ /* background-repeat: no-repeat; remove a repetição da imagem*/
+/*  background-position: top center; posiciona aimagem no centro da tela para uso responsivo*/
+/*  background-size: cover;  faz com que a imagem mesmo que pequena preencha a tela
+}*/
+
+
+
+
+  /*Todos os comandos em uma só linha*/
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  padding: 2px;
+  /* border: 1px solid ; */
+}
+:root{
+  --text-color:white;
+  --bg-url: url(bg-desktop.jpg);
+  --stroke-color: rgb(255, 255, 255,0.5);
+  --surface-color:rgb(255, 255, 255,0.05);
+  --surface-color-hover:rgb(0,0, 0,0.02);
+  --hignlight-color:rgb(255, 255, 255,0.02);
+  --switch-bg-url:url(moon-stars.svg)
+
+}
+
+.light{
+  --text-color:rgb(0, 0, 0);
+  --bg-url: url(bg-desktop-light.jpg);
+  --stroke-color: rgb(0, 0, 0,0.5);
+  --surface-color:rgb(0, 0, 0,0.05);
+  --surface-color-hover:rgb(0,0, 0,0.02);
+  --hignlight-color:rgb(0, 0, 0,0.01);
+  --switch-bg-url:url(sun.svg)
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+body{
+ 
+display:flex;
+  background: var(--bg-url) no-repeat top center/cover; /* para usar o cover tem que ter "/" essa forma de usar se chama 
+shortcut*/
+width: 270px;
+margin: auto;
+height:fit-content;
+
+}
+
+body *{
+  font-family: "inter", sans-serif;
+  color:var(--text-color);
+}
+
+
+
+
+#container{
+
+width: 270px;
+
+margin: 30px auto 0px;
+text-align: center;
+
+}
+#cabecalho img {
+display: block;
+width: 112px; 
+  margin: auto;
+
+}
+#cabecalho p{
+
+  text-align: center;
+  font-weight: 500; /*peso*/  
+  line-height: 24px; /*Altura do texto*/
+  margin-top: 5px;
+  padding-bottom: 15px;
+}
+
+#perfil {
+border-radius: 50%;
+background-color: none;
+width: 112px;
+
+
+
+}
+#switch{
+  width: 64px;
+  position: relative;
+  display:flex;
+  align-items: center;
+  margin: 4px auto;
+  padding-bottom: 20px;
+}
+#switch button{
+  text-align: center;
+width: 32px;
+height: 32px;
+background: white var(--switch-bg-url) no-repeat center;
+border: 0;
+border-radius: 50%;
+position: absolute;
+
+z-index: 1;
+}
+.light #switch button{
+  right: 0;
+  left: initial;
+
+}
+#switch span{
+ 
+  display:block;
+width: 65px;
+height: 24px;
+background:var(--surface-color);
+border: 1px solid var(--stroke-color);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter:blur(4px);
+border-radius: 9999px;
+
+
+}
+
+ul li a{
+ 
+  display: flex;
+  text-decoration: none;
+border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 16px 24px;
+background:var(--surface-color);
+border:1px solid var(--stroke-color);
+backdrop-filter: blur(4px); /* Cria um efeito de embassamento no elemento*/
+-webkit-backdrop-filter: blur(4px);/* mesma utilidade que o de cima porem é para o safari apple precisa usar o -webkit-*/
+transition:background 0.3s;
+font-weight:500;
+}
+ul{
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 0;
+}
+ul li a:hover{
+  background:var(--bg-url);
+border:2px solid var(--surface-color);
+text-decoration:underline 2px solid rgb(116, 114, 114);
+}
+
+section{
+  padding: 0 24px;
+
+}
+
+/*social links*/
+
+#social-links{
+  /* padding-bottom: 40px; */
+  display: flex;
+  gap: 12px;
+
+  font-size: 28px;
+justify-content: center;
+align-items: center;
+
+}
+#social-links :hover{
+font-size: 45px;
+
+transition:0.7s;
+}
+
+
+
+/*estilos dos links*/
+#logo-facebook:hover{
+color: rgb(60, 60, 161);
+
+}
+#logo-youtube:hover{
+color: rgb(155, 3, 3);
+
+}
+#logo-instagram:hover{
+color:rgb(163, 59, 177);
+
+}
+#logo-linkedin:hover{
+ color:#8ab4f8; 
+
+}
+#logo-github:hover{
+  color:green;
+ 
+}
+
+#rodape{
+  text-align: center;
+  font-size: 12px;
+
+}
+
+
